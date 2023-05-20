@@ -1,16 +1,11 @@
-var counterVal = 0;
+const likeButton = document.getElementById('button-like');
+const likeCount = document.getElementById('likeCount')
 
-function incrementClick() {
-    document.getElementById("#coracao");
-    updateDisplay(++counterVal);
-}
+let count = 0;
 
-function resetCounter() {
-    counterVal = 0;
-    updateDisplay(counterVal);
-}
-
-function updateDisplay(val) {
-    document.getElementById("counter-label").innerHTML = val;
-}
-
+likeButton.addEventListener("click", () =>{
+    count++
+    likeCount.innerHTML = `${count}`
+    likeButton.style.borderColor = "red"
+    document.getElementById("coracao").setAttribute("fill", "red")
+});
