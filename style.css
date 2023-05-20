@@ -50,6 +50,14 @@ main{
     color: white;
   }
 
+  .flip-card-front h1::after{
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 0.3rem;
+    background-color: #fff;
+  }
+
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
@@ -73,11 +81,11 @@ main{
     transform: rotateY(180deg);
   }
 
-  .flip-card-back .links{
+  .links{
     margin-top: 50px;
   }
 
- .button-like{
+ #button-like{
     gap: 1rem;
     font-size: 30px;
     color: white;
